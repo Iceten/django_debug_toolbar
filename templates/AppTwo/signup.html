@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="{% static "css/signup.css"%}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1> Welcome to the SignUp Page</h1>
+
+      <div class="jumbotron">
+        <h2>Please enter your User info:</h2>
+        <form  method="POST">
+          {{ signupform.as_p }}
+          {% csrf_token %}
+          <input type="submit" name="btn btn-primary blue" value="submit">
+        </form>
+      </div>
+
+    </div>
+
+
+  </body>
+</html>
